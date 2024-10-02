@@ -1,9 +1,14 @@
 import { championData } from "@/types/Champion";
 import Image from "next/image";
+import Link from "next/link";
 
 const ChampionCard = ({ el }: { el: championData }) => {
+  console.log("el", el);
   return (
-    <div className="w-[23%] h-[188px] p-[20px] border-2 border-solid border-white">
+    <Link
+      href={`/champions/${el.id}`}
+      className="w-[23%] h-[188px] p-[20px] border-2 border-solid border-white"
+    >
       <div className="flex justify-center">
         <Image
           src={`${process.env.NEXT_PUBLIC_RIOT_API_URL}/cdn/${el.version}/img/champion/${el.image.full}`}
@@ -16,7 +21,7 @@ const ChampionCard = ({ el }: { el: championData }) => {
         <p className="text-[20px] font-black text-[firebrick]">{el.name}</p>
         <p className="text-[12px] text-white">{el.title}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -33,13 +33,13 @@ export default function RootLayout({
           <Link href={"/"}>
             <p>Home</p>
           </Link>
-          <Link href={"champions"}>
+          <Link href={"/champions"}>
             <p>Champions</p>
           </Link>
-          <Link href={"items"}>
+          <Link href={"/items"}>
             <p>Items</p>
           </Link>
-          <Link href={"rotation"}>
+          <Link href={"/rotation"}>
             <p>Rotation</p>
           </Link>
         </div>
