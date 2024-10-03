@@ -14,7 +14,7 @@ const ItemCard = ({ el, version }: { el: innerDataType; version: string }) => {
         />
       </div>
       <div className="flex flex-col">
-        <p className="text-[20px] font-black text-[firebrick]">{el.name}</p>
+        <p className="text-[20px] font-black text-[#f55]">{el.name}</p>
         <p className="text-[16px] text-white">{el.plaintext}</p>
       </div>
     </div>
