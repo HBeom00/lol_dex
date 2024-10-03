@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const commonStyled = "text-center text-[20px] text-white font-black pt-[8px]";
 
-const Home = () => {
+const Home = async () => {
   return (
     <div className="flex justify-evenly text-white bg-black pt-[56px] h-[100vh]">
       <Link href={"/champions"} className="flex items-center">
