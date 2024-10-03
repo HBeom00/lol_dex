@@ -31,16 +31,16 @@ export default function RootLayout({
       >
         <div className="flex justify-around items-center h-[56px] text-[20px] font-black bg-black fixed w-full text-white">
           <Link href={"/"}>
-            <p>Home</p>
+            <p>홈</p>
           </Link>
           <Link href={"/champions"}>
-            <p>Champions</p>
+            <p>챔피언</p>
           </Link>
           <Link href={"/items"}>
-            <p>Items</p>
+            <p>아이템</p>
           </Link>
           <Link href={"/rotation"}>
-            <p>Rotation</p>
+            <p>로테이션</p>
           </Link>
         </div>
         {children}

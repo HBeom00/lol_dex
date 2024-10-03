@@ -11,7 +11,7 @@ type DetailDataType = {
   [key: string]: DetailData;
 };
 
-type DetailData = {
+export type DetailData = {
   id: string;
   key: string;
   name: string;

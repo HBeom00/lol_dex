@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ChampionCard = ({ el }: { el: championData }) => {
-  console.log("el", el);
   return (
     <Link
       href={`/champions/${el.id}`}
@@ -18,7 +17,7 @@ const ChampionCard = ({ el }: { el: championData }) => {
         />
       </div>
       <div className="flex flex-col">
-        <p className="text-[20px] font-black text-[firebrick]">{el.name}</p>
+        <p className="text-[20px] font-black text-[#f55]">{el.name}</p>
         <p className="text-[12px] text-white">{el.title}</p>
       </div>
     </Link>
