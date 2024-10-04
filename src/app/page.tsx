@@ -4,6 +4,12 @@ import Diana_47 from "../public/assets/Diana_47.jpg";
 import Yone from "../public/assets/Yone.jpg";
 import Riven_16 from "../public/assets/Riven_16.jpg";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "메인화면",
+  description: "메인 페이지 입니다.",
+};
 
 const commonStyled = "text-center text-[20px] text-white font-black pt-[8px]";
 
