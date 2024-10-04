@@ -14,7 +14,7 @@ const DetailChampion = async ({ params }: Props) => {
   const data: DetailData[] = Object.values(res);
 
   return (
-    <div className="flex pt-[56px] h-[100%] text-white bg-black">
+    <div className="flex mt-[56px] h-[100%] text-white bg-black items-center">
       <div className="w-[40%] flex justify-center items-center">
         <Image
           src={`${process.env.NEXT_PUBLIC_RIOT_API_URL}/cdn/img/champion/loading/${data[0].id}_0.jpg`}
@@ -24,7 +24,7 @@ const DetailChampion = async ({ params }: Props) => {
         />
       </div>
       <div className="w-[60%]">
-        <div className="flex items-center mt-[60px] mb-[20px]">
+        <div className="flex mb-[20px]">
           <div className="text-[32px] font-black text-[#f55] mr-[12px]">
             {data[0].name}
           </div>

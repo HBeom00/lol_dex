@@ -1,6 +1,11 @@
 export const getChampionList = async () => {
   const versions = await fetch(
-    `${process.env.NEXT_PUBLIC_RIOT_API_URL}/api/versions.json`
+    `${process.env.NEXT_PUBLIC_RIOT_API_URL}/api/versions.json`,
+    {
+      next: {
+        revalidate: 86400,
+      },
+    }
   );
   const lastVersion: string[] = await versions.json();
 
