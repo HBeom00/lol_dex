@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex justify-around items-center h-[56px] text-[20px] font-black bg-black fixed w-full text-white">
+        <div className="flex justify-around items-center h-[56px] text-[20px] font-black bg-black fixed top-0 w-full text-white">
           <Link href={"/"}>
             <p>홈</p>
           </Link>
