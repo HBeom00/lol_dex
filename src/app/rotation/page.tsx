@@ -2,9 +2,13 @@ import ChampionCard from "@/components/ChampionCard";
 import { championData } from "@/types/Champion";
 import { getChampionRotation } from "@/utils/riotApi";
 import { getChampionList } from "@/utils/serverApi";
+import { Metadata } from "next";
 import React from "react";
 
-// pt-[56px] 해주기
+export const metadata: Metadata = {
+  title: "로테이션 챔피언",
+  description: "금주 로테이션을 확인할 수 있는 페이지 입니다.",
+};
 
 const Rotation = async () => {
   // 모든 챔피언 리스트 가져오기

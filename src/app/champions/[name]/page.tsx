@@ -1,11 +1,18 @@
 import { DetailData } from "@/types/DetailChampion";
 import { getDetailChampionInfo } from "@/utils/serverApi";
 import Image from "next/image";
-// import React from "react";
+import React from "react";
 
 type Props = {
   params: {
     name: string;
+  };
+};
+
+export const generateMetadata = ({ params }: Props) => {
+  return {
+    title: `${params.name}`,
+    description: `${params.name}의 정보를 확인할 수 있는 페이지 입니다.`,
   };
 };
 

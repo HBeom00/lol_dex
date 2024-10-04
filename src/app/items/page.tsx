@@ -1,7 +1,13 @@
 import ItemCard from "@/components/ItemCard";
 import { innerDataType } from "@/types/Item";
 import { getItemList } from "@/utils/serverApi";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "아이템 리스트",
+  description: "아이템 리스트를 보여주는 페이지 입니다.",
+};
 
 const Items = async () => {
   const res = await getItemList();
