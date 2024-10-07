@@ -31,7 +31,7 @@ const DetailChampion = async ({ params }: Props) => {
         />
       </div>
       <div className="w-[60%]">
-        <div className="flex mb-[20px]">
+        <div className="flex mb-[20px] items-center">
           <div className="text-[32px] font-black text-[#f55] mr-[12px]">
             {data[0].name}
           </div>

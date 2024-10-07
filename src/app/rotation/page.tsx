@@ -1,38 +1,13 @@
-import ChampionCard from "@/components/ChampionCard";
-import { championData } from "@/types/Champion";
-import { getChampionRotation } from "@/utils/riotApi";
-import { getChampionList } from "@/utils/serverApi";
+import RotationChampion from "@/components/RotationChampion";
 import { Metadata } from "next";
-import React from "react";
 
 export const metadata: Metadata = {
-  title: "로테이션 챔피언",
-  description: "금주 로테이션을 확인할 수 있는 페이지 입니다.",
+  title: "로테이션 챔피언 리스트",
+  description: "무료로 사용할 수 있는 챔피언 리스트를 보여주는 페이지 입니다.",
 };
 
-const Rotation = async () => {
-  // 모든 챔피언 리스트 가져오기
-  const res = await getChampionList();
-  const data: championData[] = Object.values(res);
-
-  // 로테이션 챔피언 번호 가져오기
-  const getRotataionRes = await getChampionRotation();
-  const filterData = data.filter((el) =>
-    getRotataionRes.includes(parseInt(el.key))
-  );
-
-  return (
-    <div className="bg-black p-[20px] pt-[76px]">
-      <div className="text-white text-[24px] font-black pl-[28px] mb-[20px]">
-        로테이션
-      </div>
-      <div className="flex flex-wrap justify-center gap-[20px]">
-        {filterData.map((el: championData) => {
-          return <ChampionCard key={el.id} el={el} />;
-        })}
-      </div>
-    </div>
-  );
+const Rotation = () => {
+  return <RotationChampion />;
 };
 
 export default Rotation;
