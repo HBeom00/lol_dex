@@ -9,6 +9,8 @@ type Props = {
   };
 };
 
+export const dynamic = "force-dynamic";
+
 export const generateMetadata = ({ params }: Props) => {
   return {
     title: `${params.name}`,

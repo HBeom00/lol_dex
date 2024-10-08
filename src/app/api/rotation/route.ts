@@ -1,12 +1,19 @@
 import { RotationType } from "@/types/RotationChampion";
 import { NextResponse } from "next/server";
 
+const RIOT_API_URL = "https://kr.api.riotgames.com";
+const RIOT_API_KEY = process.env.NEXT_PUBLIC_RIOT_API_KEY;
+
 export async function GET() {
+  if (!RIOT_API_KEY) {
+    throw new Error("API 키가 없습니다.");
+  }
+
   const rotationId = await fetch(
-    "https://kr.api.riotgames.com/lol/platform/v3/champion-rotations",
+    `${RIOT_API_URL}/lol/platform/v3/champion-rotations`,
     {
       headers: {
-        "X-Riot-Token": `${process.env.NEXT_PUBLIC_RIOT_API_KEY}`,
+        "X-Riot-Token": `${RIOT_API_KEY}`,
       },
     }
   );

@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: "챔피언 리스트를 보여주는 페이지 입니다.",
 };
 
+export const revalidate = 86400;
+
 const Champions = async () => {
   const res = await getChampionList();
   const data: championData[] = Object.values(res);
